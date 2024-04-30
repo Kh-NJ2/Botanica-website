@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const image = document.getElementById('hero-img');
     var addbtn = document.getElementsByClassName('add-to-cart');
     var count = document.getElementById('cart-count');
-    var more_btn = document.getElementById('more-btn');
 
     image.addEventListener('mouseover', function() {
         this.style.opacity = '0.9'; 

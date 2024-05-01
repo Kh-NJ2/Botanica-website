@@ -12,6 +12,7 @@ body{
     color: white;
     height: fit-content;
     width: 100vw;
+    padding-top:5px;
     top: 0;
     left: 0;
     z-index: 1;
@@ -23,6 +24,7 @@ body{
     h1{
         font-weight: 800; 
         margin-left: 40px;
+        font-size: clamp(20px, 3vw, 30px);
     }
 }
 .nav{
@@ -41,7 +43,7 @@ body{
 
 .cart{
     background-color: white;
-    width: 40px;
+    width: 35px;
     padding: 10px;
     margin-left: 40px;
     border-radius: 10px;
@@ -66,7 +68,7 @@ body{
 }
 #more-btn{
     display: none;
-    padding: 0 25px 0 10px;
+    padding: 0 15px 0 5px;
     cursor: pointer;
     fill: white;
     transition: opacity 0.5s ease;
@@ -85,7 +87,7 @@ body{
     background-color: #E6F0E0; 
     width: calc(100vw - 70px); 
     height: 800px; 
-    margin:115px 30px 60px 30px; 
+    margin:clamp(85px, 10%, 115px) 30px 60px 30px; 
     align-items: center;
     overflow: hidden;
 }
@@ -322,7 +324,12 @@ body{
 
 
 @media (max-width: 900px) {
-    
+    .header{
+        h1{
+            margin-left: 25px;
+        }
+        
+    }
     .nav {
         margin: 10px;
     }
@@ -330,8 +337,14 @@ body{
         display: none;
     }
     .cart{
-        width: 25px;
+        width: 20px;
         padding: 8px;
+    }
+    #cart-count{
+        width: 15px;
+        height: 15px;
+        top: -8px;
+        right: -18px;
     }
     #more-btn{
         display: block;

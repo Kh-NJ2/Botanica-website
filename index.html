@@ -18,7 +18,14 @@
                 <h1>Botanica</h1>
             </div>
             <div class="nav">
-                <div class="hitem">Categories</div>
+                <div class="hitem" onmouseenter='showDropDown()'>
+                    <div>Categories</div>
+                    <div id="dropdown-content" onmouseleave="hideDropDown()"> 
+                        <a href="#">Indoor Plants</a>
+                        <a href="#">Outdoor Gardens</a>
+                        <a href="#">Plant Accessories</a>
+                    </div>
+                </div>
                 <div class="hitem">About Us</div>
                 <div class="hitem" style="background-color: white; padding: 8px 25px; border-radius: 10px; color: #273320; margin-right: 30px;">Contact Us</div>
                 <div class="cart">
@@ -58,10 +65,21 @@
                 </a>
             </div>
 
-            <div class="blob1">
-                <img id="hero-img" src="/imgs/hero.png" alt="">
+            <div class="hero-col2">
+                <div class="blob1">
+                    <img class="slides fade" src="/imgs/p1.jpeg" alt="">
+                    <img class="slides fade" src="/imgs/p2.jpeg" alt="">
+                    <img class="slides fade" src="/imgs/p3.jpeg" alt="">
+                    <img class="slides fade" src="/imgs/p4.jpeg" alt="">
+                    <img class="slides fade" src="/imgs/p5.jpeg" alt="">
+                    <div class="whiteimg"></div>
+
+
+                    <a id="next"></a>
+                </div>
             </div>
-        </div>   
+            
+        </div>
 
 
         <div class="mid">
@@ -116,7 +134,7 @@
                 </svg>
             </div>      
         </div>
-
+        <div id="cartMessage" class="cart-message">Added to cart successfully</div>
 
         <div style="height: 200px; position: relative;">
             <svg class="foot" width="1440" height="204" viewBox="0 0 1440 204" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -131,6 +149,7 @@
                 </defs>
             </svg>
         </div>
+        
     </body> 
 
 </html>

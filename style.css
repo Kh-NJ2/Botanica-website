@@ -41,6 +41,28 @@ body{
     cursor: pointer;
 }
 
+#dropdown-content{
+    display: none;
+    width: 200px;
+    position: fixed;
+    transform: translate(-10% , 10%);
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+#dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 5px 16px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+#dropdown-content a:hover {
+    background-color: #9fd3937a;
+}
+
 .cart{
     background-color: white;
     width: 35px;
@@ -80,7 +102,19 @@ body{
     display: block;
 }
 
-
+.cart-message {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    transform: translate(-50%, 0%);
+    background-color: #ffffff;
+    color: rgb(0, 101, 13);
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: none;
+}
 
 .hero{
     display: flex; 
@@ -94,9 +128,9 @@ body{
 
 .hero-col1{
     flex: 1;
+    width: 42%;
     height: 100%;
-    margin-left: 7%;
-    margin-top: 100px ;
+    margin: 100px 0px 0 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,13 +142,13 @@ body{
     display: flex; 
     font-family: "Prompt", sans-serif; 
     font-weight: 700; 
-    font-size: clamp(30px,4vw, 64px);
+    font-size: clamp(20px,3.5vw, 64px);
     font-size-adjust: inherit;
     align-items: center;
 }
 .desc{
     font-family: 'Glegoo', serif; 
-    font-size: clamp(13px,1.2vw, 40px);
+    font-size: clamp(13px,1vw, 40px);
     width: 100%; 
     font-weight:lighter;
     color: #2C3328;
@@ -158,21 +192,53 @@ body{
     box-shadow: 0 12px 24px rgba(128, 128, 128, 0.16);
 }
 
-
+.hero-col2{
+    flex-basis: 70%;
+}
+.whiteimg{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    transform: translate(0%, 0%);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0),#E6F0E0);
+}
 .blob1{
-    width: 90%;
+    width: 100%;
+    display: flex;
     height: fit-content;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
     img{
-        width: 90%;
-        transition: 0.2s;
-        transition: all 0.5s ease;
-    }
-    img:hover{
         width: 100%;
+        transition: 0.5s;
     }
-    
+
+}
+.slides {
+    display: none
+}
+#next{
+    position: absolute;
+    height: 100em;
+    font-size: 100px;
+    padding: 15px;
+    right: 0;
+}
+#next:hover{
+    cursor: pointer;
+    background-color: #4e4e4e17;
 }
 
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .9}
+    to {opacity: 1}
+}
 
 .mid{
     width: calc(100vw - 75px); 
